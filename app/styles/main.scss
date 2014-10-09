@@ -6,11 +6,29 @@
 
 .header {
   background-color: RGB(245, 245, 245);
-  height: 50px;
+  height: 65px;
   border-bottom: solid gray;
   border-width: 1px;
 }
 
-h2 {
-  margin: 0;
+.mega-octicon {
+font-size: 32px;
+padding-left: 20px;
+padding-top: 10px;
+}
+
+input {
+line-height: normal;
+margin-left: 8px;
+border-radius: 3px;
+width: 300px;
+height: 25px;
+color: lightgray;
+font-size: 13px;
+margin-right: 10px;
+}
+
+.hlinks {
+  word-spacing: 12px;
+  font-weight: bold;
 }
