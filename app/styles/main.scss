@@ -15,20 +15,20 @@
 }
 
 .mega-octicon {
-font-size: 32px;
-padding-left: 20px;
-padding-top: 10px;
+  font-size: 32px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 input {
-line-height: normal;
-margin-left: 8px;
-border-radius: 3px;
-width: 300px;
-height: 25px;
-color: lightgray;
-font-size: 13px;
-margin-right: 10px;
+  line-height: normal;
+  margin-left: 8px;
+  border-radius: 3px;
+  width: 300px;
+  height: 25px;
+  color: lightgray;
+  font-size: 13px;
+  margin-right: 10px;
 }
 
 .hlinks {
@@ -62,4 +62,56 @@ img {
 
 .lo {
   font-size: 20px;
+  color: lightslategray;
+  padding-bottom: 15px;
+  //border-bottom: solid 1px;
+  //margin-right: 0px;
+}
+
+.octicon-mail:before {
+  content: '\f03b';
+  padding-right: 6px;
+  color: lightslategray;
+}
+
+.mid {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  //border-bottom: solid 1px;
+  //margin-right: 1020px;
+  color: lightslategray;
+}
+
+.em {
+  padding-bottom: 4px;
+  color: RGB(65, 131, 196);
+}
+
+.ca {
+  padding-top: 4px;
+  color: black;
+}
+
+.octicon-clock:before {
+  content: '\f046';
+  padding-right: 6px;
+  color: lightslategray;
+}
+
+.foll {
+  display: inherit;
+  list-style: none;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+    .fers, .fing {
+      font-size: 30px;
+    }
+
+    .fow, .folw {
+      font-size: 10px;
+    }
 }

@@ -10,12 +10,12 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-     <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -31,6 +31,7 @@
       <span class="mega-octicon octicon-mark-github"></span>
         <input type="text" name="input" value="Search GitHub">
           <span class='hlinks'>Explore Gist Blog Help</span>
+
 
     </div>
 
@@ -51,16 +52,23 @@
       <script type="text/template" id="user_stuff">
         <img src="<%= avatar_url %>" />
 
-        <ul class='info'>
+      <ul class='info'>
         <li class='na'><%= name %></li>
         <li class='lo'><%= login %></li>
+          <ul class='mid'>
+        <li class='em'><span class="octicon octicon-mail"></span> <%=email%></li>
+        <li class='ca'><span class="octicon octicon-clock"></span><%= created_at %></li>
+          </ul>
+          <div class='foll'>
+        <div class='fers'><%= followers %></div>
+          <span class='fow'>Followers</span>
+        <div class='fing'><%= following %></div>
+          <span class='folw'>Following</span>
+        </div>
+      </ul>
+    </script>
 
-        <li><span class="octicon octicon-mail"></span>Email: <%=email%></li>
-        <li><%= created_at %></li>
-        <li><%= followers %></li>
-        <li><%= following %></li>
-        </ul>
-        </script>
+
 
 
     <!-- build:js scripts/vendor.js -->
