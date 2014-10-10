@@ -15,3 +15,10 @@ $.getJSON(url).done(function (user_data) {
 
 
 });
+
+var temp = $('#heading').html(),
+    renderhead = _.template(temp);
+
+$.getJSON(url).done(function (use) {
+  $('.header').append(renderhead(use));
+});
