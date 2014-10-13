@@ -65,6 +65,7 @@ input {
 .leftside {
   margin-top: 20px;
   margin-left: 180px;
+  margin-right: 1000px;
 }
 
 img {
@@ -141,3 +142,65 @@ img {
 
 
   //RIGHT SIDE OF PAGE
+
+main {
+  background: #FFF;
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px 30px 30px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+p {
+  font-size: 14px;
+  line-height: 21px;
+}
+input, section {
+  clear: both;
+  padding-top: 10px;
+  display: none;
+}
+label {
+  color: RGB(51, 51, 51);
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  float: left;
+  padding: 10px 30px;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid #C9C2BE;
+  border-radius: 3px;
+}
+label:hover {
+  cursor: pointer;
+}
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 {
+  display: block;
+}
+input:checked + label {
+  border-top-color: #C9C2BE;
+  border-right-color: #C9C2BE;
+  border-left-color: #C9C2BE;
+  border-bottom-color: transparent;
+  text-decoration: none;
+}
+
+.octicon-diff-added:before {
+content: '\f06b';
+padding-right: 6px;
+}
+
+.octicon-repo-delete:before, .octicon-repo:before {
+content: '\f001';
+padding-right: 6px;
+}
+
+.octicon-rss:before {
+content: '\f034';
+padding-right: 6px;
+}
+
+.rightside {
+  margin-left: 300px;
+}
