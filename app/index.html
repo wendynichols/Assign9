@@ -142,24 +142,14 @@
           </span>
         </a>
       </div>
-      <!-- end of bottom half of body top -->
 
-      <!-- beginning of projects section -->
-      <section class="bars2">
+      <section class="bars2"></section>
 
-
-      </section>
-
-
-      <!-- javascript templates -->
-      <!-- top box -->
       <script type="text/template" id="top_box">
         <img class="little_me" src= "<%= avatar_url %>" />
         <span class="username"><%= login %></span>
       </script>
 
-
-      <!-- side bar -->
       <script type="text/template" id="side_box">
         <img class="me" src= "<%= avatar_url %>" />
 
@@ -181,13 +171,11 @@
         </ul>
       </script>
 
-      <!-- Organizations badges -->
       <script type="text/template" id="org_img">
         <img class="org" src= "<%= avatar_url %>" width=42px;/>
       </script>
 
 
-      <!-- main repos section -->
       <script type="text/template" id="repo">
         <div class="bars">
 
@@ -196,20 +184,15 @@
           </a>
           <div class="update"><%=updated_at%></div>
 
-
           <span class="right"><%= language%>
             <span class="octicon octicon-star">
               <%=stargazers_count%>
               <span class="octicon octicon-git-branch">
                 <%= forks%>
               </span>
-            </div>
+          </div>
+      </script>
 
-          </script>
-
-
-
-    <!-- star script -->
     <script type="text/template" id="star">
       <span class="star_count"> <%=stargazers_count%> </span>
     </script>
@@ -235,7 +218,6 @@
         <span class="foot_icon">
           <span class="mega-octicon octicon-mark-github"></span>
         </span>
-
       </div>
     </footer>
 
@@ -250,8 +232,7 @@
 
         <script src="scripts/token.js"></script>
         <!-- build:js scripts/main.js -->
-        <script src="scripts/templates.js"></script>
-        <script src="scripts/main.js"></script>
+          <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -39,26 +39,23 @@ input{
   height: 28px;
   width:360px;
   font-size: .8em;
-  @include font;
 }
 .head_right{
   float: right;
-  @include font;
   margin-right: 147px;
   margin-top: 15px;
   position: relative;
 
 }
-
 .little_me{
-  border-radius: 3px;
-  height: 22px;
-  width: 22px;
   margin-top: -41px;
   float:left;
   position: absolute;
   top: 39px;
   right: 215px;
+  border-radius: 3px;
+  height: 22px;
+  width: 22px;
 }
 .username{
   font-size: .8em;
@@ -98,9 +95,8 @@ aside{
   height: 620px;
   float: left;
   margin-top: 20px;
-  margin-left: 150px;
+  margin-left: 130px;
   clear: right;
-  @include font;
 
   .me{
     height: 230px;
@@ -108,7 +104,6 @@ aside{
     border-radius: 5px;
   }
 }
-
 .names{
   border-bottom: solid 1px HSLA(0, 0%, 90%, 1);
 }
@@ -121,7 +116,6 @@ h2{
   margin-top: -24px;
 }
 .location {
-
   font-size: .9em;
   color: HSLA(0, 0%, 20%, 1);
   margin-top:30px;
@@ -159,9 +153,8 @@ li{
   font-weight: bold;
 }
 .org{
-
+  border-top: solid 1px HSLA(0, 0%, 90%, 1);
   font-weight: bold;
-  border-top: solid 1 px HSLA(0, 0%, 90%, 1);
 }
 .org2{
   font-weight: bold;
@@ -177,9 +170,9 @@ li{
 }
 .projectName{
   color: HSLA(210, 53%, 51%, 1);
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-weight: bold;
   font-size: 20px;
+  margin-bottom: 20px;
   width: 300px;
   display: inline-block;
   margin-top: 50px;
@@ -187,9 +180,8 @@ li{
     text-decoration:underline;
   }
 }
-
 .update{
-  font-weight: 200;
+  font-weight: 199;
   color: gray;
   width: 300px;
 }
@@ -243,12 +235,12 @@ li{
   margin-right: 293px;
 }
 .edit_profile{
-  border-radius: 3px;
   border: solid 1px HSLA(0, 0%, 90%, 1);
   background-color: HSLA(0, 0%, 98%, 1);
   color:HSLA(0, 0%, 20%, 1);
   font-weight: bold;
   font-size: .8em;
+  border-radius: 3px;
 }
 .bottom_half{
   padding: 5px;
@@ -326,7 +318,6 @@ a{
   text-decoration: none;
 }
 footer{
-  @include font;
   color: HSLA(0, 0%, 66%, 1);
 }
 .foot{
