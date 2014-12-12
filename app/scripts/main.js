@@ -3,22 +3,13 @@ var repo ='https://api.github.com/users/wendynichols/repos';
 var org = 'https://api.github.com/users/wendynichols/orgs';
 var starred = 'https://api.github.com/users/wendynichols/starred';
 
-// var template= $('#user_stuff').html();
-// var rendered = _.template(template);
-//
-// $.getJSON(url-variable).done( function(user_data){
-//
-// $('.hero-unit').append(rendered(user_data));
-// });
 
-// header////////////////////////////////////////
 var template= $('#top_box').html();
 var rendered = _.template(template);
 $.getJSON(users).done( function(i){
   $('.head_right').prepend(rendered(i));
 });
 
-// side bar///////////////////////////////////////
 var template2= $('#side_box').html();
 var rendered2 = _.template(template2);
 
@@ -28,7 +19,6 @@ $.getJSON(users).done( function(i){
 });
 
 
-// starred///////////////////////////////
 var template5= $('#star').html();
 var rendered5= _.template(template5);
 var star_count;
@@ -44,10 +34,6 @@ $.getJSON(starred).done(function(starred_data){
 
 });
 
-
-
-
-////////////////////////////////////////////////
 
 var template3= $('#org_img').html();
 var rendered3 = _.template(template3);
@@ -70,29 +56,3 @@ $.getJSON(repo).done( function(i){
 
   })
 });
-
-// var url = 'https://api.github.com/users/wendynichols';
-//
-// var template = $('#user_stuff').html(),
-//     rendered = _.template(template);
-//
-//
-// $.getJSON(url).done(function (user_data) {
-//
-//   //console.log(user_data.name);
-//   //as many statements that pertain to this 'user_data' as possible
-//
-//   $('.leftside').append(rendered(user_data));
-//
-//
-// });
-//
-// var temp = $('#heading').html(),
-//     renderhead = _.template(temp);
-//
-// $.getJSON(url).done(function (use) {
-//   $('.header').append(renderhead(use));
-// });
-//
-//
-//     //RIGHT SIDE TABS

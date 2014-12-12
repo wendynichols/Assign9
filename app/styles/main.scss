@@ -2,23 +2,14 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
-// Custom Styles
-$ltgray: HSLA(0, 0%, 96%, 1);
-$border: HSLA(0, 0%, 90%, 1);
-$searchfont:HSLA(0, 0%, 66%, 1);
-$icon: HSLA(0, 0%, 80%, 1);
-$blue: HSLA(210, 53%, 51%, 1);
-@mixin font{
-  font-family: Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  background-color:white;
 }
-
-body{
-  font-family: Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-/* header section*/////////////////////////////////
 header{
-  background-color: $ltgray;
+  background-color: HSLA(0, 0%, 96%, 1);
   height: 48px;
   width: 100%;
   border-bottom-color: HSLA(0, 0%, 90%, 1);
@@ -43,7 +34,7 @@ header{
 }
 
 input{
-  color:$searchfont;
+  color:HSLA(0, 0%, 66%, 1);
   border-radius: 3px;
   height: 28px;
   width:360px;
@@ -101,9 +92,7 @@ input{
   margin-left: 10px;
   color: HSLA(0, 0%, 20%, 1);
 }
-/* end of header section */////////////////////////
 
-/* sidebar *///////////////////////////////////////
 aside{
   width: 225px;
   height: 620px;
@@ -121,7 +110,7 @@ aside{
 }
 
 .names{
-  border-bottom: solid 1px $border;
+  border-bottom: solid 1px HSLA(0, 0%, 90%, 1);
 }
 h1{
   margin-top: 0;
@@ -139,35 +128,28 @@ h2{
   color: HSLA(0, 0%, 80%, 1);
 }
 .mail{
-
   font-size: .9em;
-  color: HSLA(0, 0%, 20%, 1);
   text-decoration: none;
-  color: HSLA(0, 0%, 80%, 1);
-
+  text-color: RGBA(65, 131, 196, 1);
 }
 .joined{
-
   font-size: .9em;
   color: HSLA(0, 0%, 80%, 1)
-
 }
-
 .octicon-location{
-  color: $icon;
+  color: HSLA(0, 0%, 80%, 1);
   margin-right: 5px;
 }
 .octicon-mail{
-  color: $icon;
+  color: HSLA(0, 0%, 80%, 1);
   margin-right: 5px;
 }
 .octicon-clock{
-  color: $icon;
+  color: HSLA(0, 0%, 80%, 1);
   margin-right: 5px;
 }
-
 .zero{
-  color: $blue;
+  color: RGBA(65, 131, 196, 1);
   list-style-type: none;
   margin-bottom: -9px;
 }
@@ -175,48 +157,11 @@ li{
   display: inline-block;
   font-size: 1.7em;
   font-weight: bold;
-
 }
-
-.star_count{
-  position: absolute;
-  top: 478px;
-  color: $blue;
-  left: 250px;
-}
-.list{
-  margin-right: 140px;
-  margin-left: -14px;
-}
-.list2{
-  margin-left:-12px;
-}
-.c{
-  margin-left: 2px;
-}
-.follow{
-  font-size: .8em;
-  color: $searchfont;
-  margin-right: 10px;
-  width: 30px;
-  margin-left: 7px;
-  font-weight: 200px;
-}
-.followers{
-  border-bottom: solid 1px $border;
-  display: inline-block;
-}
-.followers1{
-  font-size: 12px;
-  margin-right: 16px;
-  margin-left: 8px;
-}
-
 .org{
 
   font-weight: bold;
-  border-top: solid 1 px $border;
-
+  border-top: solid 1 px HSLA(0, 0%, 90%, 1);
 }
 .org2{
   font-weight: bold;
@@ -225,116 +170,10 @@ li{
   height:40px;
   width:40px;
 }
-/* main body section */////////////////////////////
-.main{
-  width: 740px;
-  height: 1000px;
-  float: right;
-  margin-right: 148px;
-  margin-top: 20px;
-}
-
-.top_half{
-  height: 35px;
-}
-
-.b1{
-  border-bottom: solid 1px $border;
-  padding: 8px;
-  padding-right: 15px;
-  padding-left: 10px;
-  color: HSLA(0, 0%, 40%, 1);
-  width: 136px;
-  font-size: smaller;
-
-}
-
-.b2{
-  border: solid 1px $border;
-  border-bottom: none;
-  padding: 8px;
-  padding-right: 15px;
-  padding-left: 10px;
-  color: black;
-  width: 136px;
-  font-size: smaller;
-
-}
-.b3{
-  border-bottom: solid 1px $border;
-  padding: 8px;
-  padding-right: 15px;
-  padding-left: 10px;
-  color: HSLA(0, 0%, 40%, 1);
-  width: 136px;
-  font-size: smaller;
-
-}
-.public{
-  margin-right: 293px;
-}
-
-.edit_profile{
-  border-radius: 3px;
-  border: solid 1px $border;
-
-  background-color: HSLA(0, 0%, 98%, 1);
-  color:HSLA(0, 0%, 20%, 1);
-  font-weight: bold;
-  font-size: .8em;
-}
-
-.bottom_half{
-  padding: 5px;
-}
-
-.items{
-  color: $blue;
-  font-size: 14px;
-  display: inline-block;
-  margin-right: 9px;
-  text-decoration: none;
-}
-
-.all{
-  color:black;
-  font-weight: bold;
-  font-size: 12px;
-  margin-right: 15px;
-  text-decoration: none;
-}
-
-.bottom_search{
-  font-weight: 200;
-  width:260px;
-  height:35px;
-}
-
-.search1{
-  height: 34px;
-  width: 69px;
-  border-radius: 3px;
-  border: solid 1px $border;
-  background-color: HSLA(0, 0%, 98%, 1);
-  color:HSLA(0, 0%, 20%, 1);
-  font-size: 12px;
-}
-.search2{
-  border-radius: 3px;
-  border: solid 1px $border;
-  background-color: HSLA(104, 51%, 57%, 1);
-  font-size: 12px;
-  color: white;
-}
-
-a{
-  text-decoration: none;
-}
-/* repo display *//////////////////////////////////
 .bars{
   height: 135px;
   width: 745px;
-  border-top: solid 1px $border;
+  border-top: solid 1px HSLA(0, 0%, 90%, 1);
 }
 .projectName{
   color: HSLA(210, 53%, 51%, 1);
@@ -350,11 +189,9 @@ a{
 }
 
 .update{
+  font-weight: 200;
   color: gray;
   width: 300px;
-  font-weight: 200;
-
-
 }
 .right{
   float: right;
@@ -364,11 +201,133 @@ a{
   font-weight: bold;
   margin-top: -41px;
 }
-/* end of main body section *//////////////////////
-///////////////////////////////////////////////////
+.main{
+  float: right;
+  width: 740px;
+  height: 1000px;
+  margin-right: 150px;
+  margin-top: 20px;
+}
+.top_half{
+  height: 35px;
+}
+.b1{
+  border-bottom: solid 1px HSLA(0, 0%, 90%, 1);
+  padding: 8px;
+  font-size: smaller;
+  padding-right: 15px;
+  padding-left: 10px;
+  color: HSLA(0, 0%, 40%, 1);
+  width: 136px;
+}
+.b2{
+  border: solid 1px HSLA(0, 0%, 90%, 1);
+  border-bottom: none;
+  padding: 8px;
+  padding-right: 15px;
+  padding-left: 10px;
+  color: black;
+  width: 136px;
+  font-size: smaller;
+}
+.b3{
+  border-bottom: solid 1px HSLA(0, 0%, 90%, 1);
+  padding: 8px;
+  font-size: smaller;
+  padding-right: 15px;
+  padding-left: 10px;
+  color: HSLA(0, 0%, 40%, 1);
+  width: 136px;
+}
+.public{
+  margin-right: 293px;
+}
+.edit_profile{
+  border-radius: 3px;
+  border: solid 1px HSLA(0, 0%, 90%, 1);
+  background-color: HSLA(0, 0%, 98%, 1);
+  color:HSLA(0, 0%, 20%, 1);
+  font-weight: bold;
+  font-size: .8em;
+}
+.bottom_half{
+  padding: 5px;
+}
+.items{
+  color: RGBA(65, 131, 196, 1);
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 9px;
+  text-decoration: none;
+}
+.all{
+  color:black;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.star_count{
+  position: absolute;
+  top: 478px;
+  color: RGBA(65, 131, 196, 1);
+  left: 250px;
+}
+.list{
+  margin-right: 140px;
+  margin-left: -14px;
+}
+.list2{
+  margin-left:-12px;
+}
+.c{
+  margin-left: 2px;
+}
+.follow{
+  margin-left: 7px;
+  font-weight: 200px;
+  font-size: .8em;
+  color: HSLA(0, 0%, 66%, 1);
+  margin-right: 10px;
+  width: 30px;
+}
+.followers{
+  border-bottom: solid 1px HSLA(0, 0%, 90%, 1);
+  display: inline-block;
+}
+.followers1{
+  font-size: 12px;
+  margin-right: 16px;
+  margin-left: 8px;
+}
+.bottom_search{
+  font-weight: 200;
+  width:260px;
+  height:35px;
+}
+
+.search1{
+  border: solid 1px HSLA(0, 0%, 90%, 1);
+  background-color: HSLA(0, 0%, 98%, 1);
+  height: 34px;
+  width: 69px;
+  border-radius: 3px;
+  color:HSLA(0, 0%, 20%, 1);
+  font-size: 12px;
+}
+.search2{
+  border: solid 1px HSLA(0, 0%, 90%, 1);
+  background-color: HSLA(104, 51%, 57%, 1);
+  border-radius: 3px;
+  font-size: 12px;
+  color: white;
+}
+a{
+  text-decoration: none;
+}
 footer{
   @include font;
-  color: $searchfont;
+  color: HSLA(0, 0%, 66%, 1);
 }
 .foot{
   border-top: solid 1px HSLA(0, 0%, 93%, 1);
@@ -391,305 +350,10 @@ footer{
 .bottom_left{
   margin-top: 25px;
   font-size: .75em;
-  color: $blue;
+  color: RGBA(65, 131, 196, 1);
 }
 .bottom_right{
   float: right;
   font-size: .75em;
-  color: $blue;
+  color: RGBA(65, 131, 196, 1);
 }
-/*  // Bourbon & Neat
-@import '../../bower_components/bourbon/dist/bourbon';
-@import '../../bower_components/neat/app/assets/stylesheets/neat';
-
-// Custom Styles
-
-
-   //TOP OF PAGE (header/navigation bar)
-.header {
- background-color: RGB(245, 245, 245);
- height: 65px;
- border-bottom: solid gray;
- border-width: 1px;
- padding-left: 160px;
-}
-
-.mega-octicon {
- font-size: 32px;
- padding-left: 20px;
- padding-top: 10px;
- margin-left: 15px;
-}
-
-input {
- line-height: normal;
- margin-left: 8px;
- border-radius: 3px;
- width: 400px;
- height: 35px;
- color: lightgray;
- font-size: 13px;
- margin-right: 10px;
-}
-
-.hlinks {
- word-spacing: 12px;
- font-weight: bold;
- font-size: 15px;
-}
-
-.littimg {
- width: 25px;
- margin-left: 140px;
- padding-top: 20px;
-}
-
-.nam {
- font-weight: bold;
- font-size: 15px;
-}
-
-.nam:hover {
- color: RGB(65, 131, 196);
-}
-
-.input2 {
-   line-height: normal;
-   margin-left: 8px;
-   border-radius: 3px;
-   width: 300px;
-   height: 35px;
-   color: lightgray;
-   font-size: 13px;
-   margin-right: 10px;
-}
-
-
-
-
-
-   //LEFT SIDE OF PAGE
-
-.leftside {
- width: 225px;
- height: 620px;
- float: left;
- margin-top: 20px;
- margin-left: 150px;
- clear: right;
-}
-
-img {
- width: 230px;
- border-radius: 3px;
-}
-
-.info {
- list-style: none;
- padding: 0;
-}
-
-.na {
- display: block;
- font-size: 26px;
- font-weight: bold;
-}
-
-.lo {
- font-size: 20px;
- color: lightslategray;
- padding-bottom: 15px;
- //border-bottom: solid 1px;
- //margin-right: 0px;
-}
-
-.octicon-mail:before {
- content: '\f03b';
- padding-right: 6px;
- color: lightslategray;
-}
-
-.mid {
- list-style: none;
- padding-left: 0;
- padding-top: 15px;
- padding-bottom: 15px;
- //border-bottom: solid 1px;
- //margin-right: 1020px;
- color: lightslategray;
-}
-
-.em {
- padding-bottom: 4px;
- color: RGB(65, 131, 196);
-}
-
-.ca {
- padding-top: 4px;
- color: black;
-}
-
-.octicon-clock:before {
- content: '\f046';
- padding-right: 6px;
- color: lightslategray;
-}
-
-.foll {
- display: inherit;
- list-style: none;
- margin-bottom: 10px;
- padding-top: 15px;
- padding-bottom: 15px;
-
-   .fers, .fing {
-     font-size: 30px;
-   }
-
-   .fow, .folw {
-     font-size: 10px;
-   }
-}
-
-
- //RIGHT SIDE OF PAGE
-
-main {
- background: #FFF;
- width: 100%;
- margin: 0px auto;
- padding: 10px 30px 30px;
- box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-}
-
-p {
- font-size: 14px;
- line-height: 21px;
-}
-#tab1, #tab2, #tab3, section {
- clear: both;
- padding-top: 10px;
- display: none;
-}
-label {
- color: RGB(51, 51, 51);
- font-weight: bold;
- font-size: 14px;
- display: block;
- float: left;
- padding: 10px 30px;
- border-top: 1px solid transparent;
- border-right: 1px solid transparent;
- border-left: 1px solid transparent;
- border-bottom: 1px solid #C9C2BE;
- border-radius: 3px;
-}
-label:hover {
- cursor: pointer;
-}
-#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 {
- display: block;
-}
-input:checked + label {
- border-top-color: #C9C2BE;
- border-right-color: #C9C2BE;
- border-left-color: #C9C2BE;
- border-bottom-color: transparent;
- text-decoration: none;
-}
-
-.octicon-diff-added:before {
-content: '\f06b';
-padding-right: 6px;
-}
-
-.octicon-repo-delete:before, .octicon-repo:before {
-content: '\f001';
-padding-right: 6px;
-}
-
-.octicon-rss:before {
-content: '\f034';
-padding-right: 6px;
-}
-
-.editprofile, .searchbutt {
- border-radius: 2px;
- border: solid 1px;
- background-color: HSLA(0, 0%, 98%, 1);
- border-color:RGB(204, 204, 204);
- font-weight: bold;
- font-size: .8em;
-}
-
-.bottom_half{
- padding: 5px;
-}
-
-.link{
- color: RGB(65, 131, 196);
- font-size: 14px;
- display: inline-block;
- margin-right: 9px;
- text-decoration: none;
-}
-
-.all{
-color:black;
-font-weight: bold;
- font-size: 12px;
- margin-right: 15px;
- text-decoration: none;
-}
-
-.bottom_search{
- font-weight: 200;
- width:260px;
- height:35px;
-}
-
-.newbutt{
- border-radius: 3px;
- border: solid 1px ;
- background-color: HSLA(104, 51%, 57%, 1);
- font-size: 15px;
- color: white;
-}
-
-a{
- text-decoration: none;
-}
-
-.tabs{
- height: 135px;
- width: 745px;
- border-top: solid 1px RGB(204, 204, 204);
-}
-.repoName{
- color: HSLA(210, 53%, 51%, 1);
- font-weight: 600;
- margin-bottom: 20px;
- font-size: 20px;
- width: 300px;
- display: inline-block;
- margin-top: 50px;
-&:hover{
- text-decoration:underline;
-}
-}
-
-.update{
- color: gray;
- width: 300px;
- font-weight: 200;
-
-
-}
-.right{
- float: right;
- color: gray;
- font-size: .8em;
- padding: 5px;
- font-weight: bold;
- margin-top: -41px;
-} */
