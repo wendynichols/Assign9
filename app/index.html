@@ -24,117 +24,334 @@
   </head>
   <body>
 
+    <!-- header -->
+    <header class="head">
+      <div class="head_left">
+        <span class="mega-octicon octicon-mark-github"></span>
+        <input class="top_search" type="text" value="Search GitHub">
+      </div>
+      <div class="top_nav">
+        <a class ="links" href="https://github.com/explore">Explore</a>
+        <a class ="links" href ="https://gist.github.com">Gist</a>
+        <a class ="links" href ="https://blog.github.com">Blog</a>
+        <a class ="links" href ="https://explore.github.com">Explore</a>
+        <a class ="links" href ="https://help.github.com">Help</a>
+      </div>
+
+      <div class="head_right">
+        <span class="two_icons">
+
+          <span class="octicon octicon-plus"></span></span>
+
+          <span class="two_icons">
+
+            <span class="octicon octicon-triangle-down"></span></span>
+
+            <a href="https://github.com/notifications">
+              <span class="regular">
+                <span class="octicon octicon-inbox"></span></span>
+              </a>
+              <a href="https://github.com/settings">
+                <span class="regular">
+                  <span class="octicon octicon-gear"></span></span>
+                </a>
+                <a href="https://github.com/signout">
+                  <span class="regular">
+                    <span class="octicon octicon-sign-out"></span>
+                  </span>
+                </a>
+
+
+              </div>
+            </header>
+
+            <!-- end of header -->
+
+  <!-- start of sidebar -->
+  <aside class="sidebar">
+
+    <li class="star"></li>
+    <li class="b"></li>
+
+    <span class="followers">
+      <span class="followers1">Followers</span>
+      <span class="followers1">Starred</span>
+      <span class="followers1">Following</span>
+    </span>
+
+    <p class='org2'>Organizations</p>
+    <div class="org"></div>
+
+
+  </aside>
+  <!-- end of sidebar -->
+
+  <!-- main body section -->
+  <section class="main">
+    <!-- top half -->
+    <div class="top_half">
+      <span class="b1">
+        <span class="octicon octicon-plus"></span>
+        <span class="contributions">Contributions</span>
+      </span>
+      <span class="b2">
+        <span class="octicon octicon-repo"></span>
+        <span class="repositories">Repositories</span>
+      </span>
+
+      <span class="b3">
+        <span class="octicon octicon-rss"></span>
+        <span class="public">Public Activity</span>
+        <a href="https://github.com/account">
+          <button class="edit_profile">
+            <span class="octicon octicon-pencil"></span>
+            Edit Profile
+          </button>
+        </span>
+      </a>
+    </div>
+    <!-- end of top half -->
+
+    <!-- bottom half of repos search section -->
+    <div class="bottom_half">
+      <input class="bottom_search" type="text" value="Find a repository...">
+      <button class="search1">Search</button>
+      <span class="things">
+        <a href="https://github.com/repositories/all">
+          <span class="all">All</span>
+        </a>
+        <a href="https://github.com/repositories/public">
+          <span class="items">Public</span>
+        </a>
+        <a href="https://github.com/repositories/private">
+          <span class="items">Private</span>
+        </a>
+        <a href="https://github.com/repositories/sources">
+          <span class="items">Sources</span>
+        </a>
+        <a href="https://github.com/repositories/forks">
+          <span class="items">Forks</span>
+        </a>
+        <a href="https://github.com/repositories/mirrors">
+          <span class="items">Mirrors</span>
+        </a>
+
+        <a href="https://github.com/repositories/new">
+          <button class="search2"><span class="octicon octicon-repo"></span>
+            New</button>
+          </span>
+        </a>
+      </div>
+      <!-- end of bottom half of body top -->
+
+      <!-- beginning of projects section -->
+      <section class="bars2">
+
+
+      </section>
+
+
+      <!-- javascript templates -->
+      <!-- top box -->
+      <script type="text/template" id="top_box">
+        <img class="little_me" src= "<%= avatar_url %>" />
+        <span class="username"><%= login %></span>
+      </script>
+
+
+      <!-- side bar -->
+      <script type="text/template" id="side_box">
+        <img class="me" src= "<%= avatar_url %>" />
+
+        <div class="names">
+          <h1 class="name"><%= name %></h1>
+          <h2 class="login"> <%= login %> </h2>
+        </div>
+
+        <div class="location"><span class="octicon octicon-location"></span><%= location %></div>
+
+        <div class="mail"><span class="octicon octicon-mail"></span></span><a href="chelseafranz.com"><%= email %></a></div>
+
+        <div class="joined"><span class="octicon octicon-clock"></span>Joined on September 22. 2014</div>
+
+        <ul class="zero">
+          <li class="list"><%= followers %></li>
+
+          <li class="list2"><%= following %></li>
+        </ul>
+      </script>
+
+      <!-- Organizations badges -->
+      <script type="text/template" id="org_img">
+        <img class="org" src= "<%= avatar_url %>" width=42px;/>
+      </script>
+
+
+      <!-- main repos section -->
+      <script type="text/template" id="repo">
+        <div class="bars">
+
+          <a href='https://github.com/chelseafranz/<%=name%>' >
+            <div class="projectName"><%= name %></div>
+          </a>
+          <div class="update"><%=updated_at%></div>
+
+
+          <span class="right"><%= language%>
+            <span class="octicon octicon-star">
+              <%=stargazers_count%>
+              <span class="octicon octicon-git-branch">
+                <%= forks%>
+              </span>
+            </div>
+
+          </script>
 
 
 
+    <!-- star script -->
+    <script type="text/template" id="star">
+      <span class="star_count"> <%=stargazers_count%> </span>
+    </script>
+
+    <footer>
+      <div class="foot">
+        <span class="bottom_left">
+          <span>© 2014 GitHub, Inc.</span>
+          <span class="l">Terms</span>
+          <span class="l">Privacy</span>
+          <span class="l">Secutity</span>
+          <span class="l">Contact</span>
+        </span>
+
+        <span class="bottom_right">
+          <span class="r">Status</span>
+          <span class="r">API</span>
+          <span class="r">Training</span>
+          <span class="r">Shop</span>
+          <span class="r">Blog</span>
+          <span class="r">About</span>
+        </span>
+        <span class="foot_icon">
+          <span class="mega-octicon octicon-mark-github"></span>
+        </span>
+
+      </div>
+    </footer>
+
+
+<!--
     <div class="header">
       <span class="mega-octicon octicon-mark-github"></span>
         <input type="text" name="input" value="Search GitHub">
           <span class='hlinks'>Explore Gist Blog Help</span>
 
-    </div>
+    </div> -->
 
-  <!-- End of Navigation Bar -->
-  <!-- Start of Left column -->
 
-    <div class='leftside'>
-    </div>
 
-  <!-- Start of Repositories -->
-      <div class='rightside'>
-         <input id="tab1" type="radio" name="tabs" checked>
-  <label for="tab1">
-    <span class="octicon octicon-diff-added"></span>Contributions</label>
-  <input id="tab2" type="radio" name="tabs">
-  <label for="tab2">
-    <span class="octicon octicon-repo"></span>Repositories</label>
-  <input id="tab3" type="radio" name="tabs">
-  <label for="tab3"><span class="octicon octicon-rss"></span>Public Activity</label>
 
-    <div class='underrepo'>
-       <button class="editprofile">
-        <span class="octicon octicon-pencil"></span>
-        Edit Profile
-      </button>
-          <span class="links">
-    <a href="https://github.com/wendynichols?tab=repositories">
-     <span class="all">All</span>
-   </a>
-   <a href="https://github.com/wendynichols?tab=repositories">
-     <span class="link">Public</span>
-   </a>
-   <a href="https://github.com/wendynichols?tab=repositories">
-     <span class="link">Private</span>
-   </a>
-   <a href="https://github.com/wendynichols?tab=repositories">
-     <span class="link">Sources</span>
-   </a>
-   <a href="https://github.com/wendynichols?tab=repositories">
-     <span class="link">Forks</span>
-   </a>
-   <a href="https://github.com/wendynichols?tab=repositories">
-     <span class="link">Mirrors</span>
-   </a>
+<!--
+  End of Navigation Bar
+Start of Left column
 
-    <a href="https://github.com/new">
-     <button class="newbutt"><span class="octicon octicon-repo"></span>
-     New</button>
-  </span>
+  <div class='leftside'>
+  </div>
+
+Start of Repositories
+    <div class='rightside'>
+       <input id="tab1" type="radio" name="tabs" checked>
+<label for="tab1">
+  <span class="octicon octicon-diff-added"></span>Contributions</label>
+<input id="tab2" type="radio" name="tabs">
+<label for="tab2">
+  <span class="octicon octicon-repo"></span>Repositories</label>
+<input id="tab3" type="radio" name="tabs">
+<label for="tab3"><span class="octicon octicon-rss"></span>Public Activity</label>
+
+  <div class='underrepo'>
+     <button class="editprofile">
+      <span class="octicon octicon-pencil"></span>
+      Edit Profile
+    </button>
+        <span class="links">
+  <a href="https://github.com/wendynichols?tab=repositories">
+   <span class="all">All</span>
+ </a>
+ <a href="https://github.com/wendynichols?tab=repositories">
+   <span class="link">Public</span>
+ </a>
+ <a href="https://github.com/wendynichols?tab=repositories">
+   <span class="link">Private</span>
+ </a>
+ <a href="https://github.com/wendynichols?tab=repositories">
+   <span class="link">Sources</span>
+ </a>
+ <a href="https://github.com/wendynichols?tab=repositories">
+   <span class="link">Forks</span>
+ </a>
+ <a href="https://github.com/wendynichols?tab=repositories">
+   <span class="link">Mirrors</span>
+ </a>
+
+  <a href="https://github.com/new">
+   <button class="newbutt"><span class="octicon octicon-repo"></span>
+   New</button>
+</span>
 </a>
 </div>
 
-  <section id="content1">
-    <p>Vivamus convallis lectus lobortis dapibus ultricies. Sed fringilla vitae velit id rutrum. Maecenas metus felis, congue ut ante vitae, porta cursus risus. Nulla facilisi. Praesent vel ligula et erat euismod luctus.</p>
-  </section>
+<section id="content1">
+  <p>Vivamus convallis lectus lobortis dapibus ultricies. Sed fringilla vitae velit id rutrum. Maecenas metus felis, congue ut ante vitae, porta cursus risus. Nulla facilisi. Praesent vel ligula et erat euismod luctus.</p>
+</section>
 
-  <section id="content2">
-    <input class='input2' type="text" name="input" value="Find a Repository...">
-    <button class='searchbutt'>Search</button>
+<section id="content2">
+  <input class='input2' type="text" name="input" value="Find a Repository...">
+  <button class='searchbutt'>Search</button>
 
-  </section>
+</section>
 
-  <section id="content3">
-    <p>Fusce pulvinar porttitor dui, eget ultrices nulla tincidunt vel. Suspendisse faucibus lacinia tellus, et viverra ligula. Suspendisse eget ipsum auctor, congue metus vel, dictum erat. Aenean tristique euismod molestie. Nulla rutrum accumsan nisl, ac semper sapien tincidunt et. Praesent tortor risus, commodo et sagittis nec, aliquam quis augue. Aenean non elit elementum, tempor metus at, aliquam felis.</p>
-  </section>
-</div>
-
-
-
-    <!-- Scripts/Templates -->
-
-    <script type="text/template" id="heading">
-      <img class='littimg' src="<%= avatar_url %>" />
-        <span class='nam'>wendynichols</span>
-        <span class="octicon octicon-plus"></span>
-          <span class="octicon    octicon-inbox"></span>
-          <span class="octicon octicon-gear"></span>
-        <span class="octicon octicon-sign-in"></span>
-
-      </script>
+<section id="content3">
+  <p>Fusce pulvinar porttitor dui, eget ultrices nulla tincidunt vel. Suspendisse faucibus lacinia tellus, et viverra ligula. Suspendisse eget ipsum auctor, congue metus vel, dictum erat. Aenean tristique euismod molestie. Nulla rutrum accumsan nisl, ac semper sapien tincidunt et. Praesent tortor risus, commodo et sagittis nec, aliquam quis augue. Aenean non elit elementum, tempor metus at, aliquam felis.</p>
+</section>
+</div> -->
 
 
-      <script type="text/template" id="user_stuff">
-        <img src="<%= avatar_url %>" />
 
-      <ul class='info'>
-        <li class='na'><%= name %></li>
-        <li class='lo'><%= login %></li>
-          <ul class='mid'>
-        <li class='em'><span class="octicon octicon-mail"></span> <%=email%></li>
-        <li class='ca'>
-        <span class="octicon octicon-clock"></span><%= created_at %>
-        </li>
-          </ul>
-          <div class='foll'>
-        <div class='fers'><%= followers %></div>
-          <span class='fow'>Followers</span>
-        <div class='fing'><%= following %></div>
-          <span class='folw'>Following</span>
-        </div>
-      </ul>
-    </script>
+<!--   Scripts/Templates
 
-    <script type="text/template" id="repos">
+<script type="text/template" id="heading">
+  <img class='littimg' src="<%= avatar_url %>" />
+    <span class='nam'>wendynichols</span>
+    <span class="octicon octicon-plus"></span>
+      <span class="octicon    octicon-inbox"></span>
+      <span class="octicon octicon-gear"></span>
+    <span class="octicon octicon-sign-in"></span>
+  </script>
+ -->
+
+<!--     <script type="text/template" id="user_stuff">
+  <img src="<%= avatar_url %>" />
+
+<ul class='info'>
+  <li class='na'><%= name %></li>
+  <li class='lo'><%= login %></li>
+    <ul class='mid'>
+  <li class='em'><span class="octicon octicon-mail"></span> <%=email%></li>
+  <li class='ca'>
+  <span class="octicon octicon-clock"></span><%= created_at %>
+  </li>
+    </ul>
+    <div class='foll'>
+  <div class='fers'><%= followers %></div>
+    <span class='fow'>Followers</span>
+  <div class='fing'><%= following %></div>
+    <span class='folw'>Following</span>
+  </div>
+</ul>
+  </script>
+
+  <script type="text/template" id="repos">
 <div class="tabs">
 
 <a href='https://github.com/wendynichols/<%=name%>' >
@@ -144,14 +361,14 @@
 
 
 <span class="right"><%= language%>
-  <span class="octicon octicon-star">
-    <%=stargazers_count%>
-    <span class="octicon octicon-git-branch">
-      <%= forks%>
-    </span>
+<span class="octicon octicon-star">
+  <%=stargazers_count%>
+  <span class="octicon octicon-git-branch">
+<%= forks%>
+  </span>
 </div>
 
-</script>
+</script> -->
 
 
 
@@ -160,11 +377,13 @@
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/handlebars/handlebars.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <script src="scripts/token.js"></script>
         <!-- build:js scripts/main.js -->
+        <script src="scripts/templates.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
