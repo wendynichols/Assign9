@@ -1,0 +1,215 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>assign9</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+    
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="head">
+      <div class="head_left">
+        <span class="mega-octicon octicon-mark-github"></span>
+        <input class="top_search" type="text" value="Search GitHub">
+      </div>
+      <div class="top_nav">
+        <a class ="links" href="https://github.com/explore">Explore</a>
+        <a class ="links" href ="https://gist.github.com">Gist</a>
+        <a class ="links" href ="https://blog.github.com">Blog</a>
+        <a class ="links" href ="https://help.github.com">Help</a>
+      </div>
+
+      <div class="head_right">
+        <span class="two_icons">
+
+          <span class="octicon octicon-plus"></span></span>
+
+          <span class="two_icons">
+
+            <span class="octicon octicon-triangle-down"></span></span>
+
+            <a href="https://github.com/notifications">
+              <span class="regular">
+                <span class="octicon octicon-inbox"></span></span>
+              </a>
+              <a href="https://github.com/settings">
+                <span class="regular">
+                  <span class="octicon octicon-gear"></span></span>
+                </a>
+                <a href="https://github.com/signout">
+                  <span class="regular">
+                    <span class="octicon octicon-sign-out"></span>
+                  </span>
+                </a>
+
+
+              </div>
+            </header>
+
+            <!-- end of header -->
+
+  <!-- start of sidebar -->
+  <aside class="sidebar">
+
+    <li class="star"></li>
+    <li class="b"></li>
+
+    <span class="followers">
+      <span class="followers1">Followers</span>
+      <span class="followers1">Starred</span>
+      <span class="followers1">Following</span>
+    </span>
+
+    <p class='org2'>Organizations</p>
+    <div class="org"></div>
+
+
+  </aside>
+  <!-- end of sidebar -->
+
+  <!-- main body section -->
+  <section class="main">
+    <!-- top half -->
+    <div class="top_half">
+      <span class="b1">
+        <span class="octicon octicon-plus"></span>
+        <span class="contributions">Contributions</span>
+      </span>
+      <span class="b2">
+        <span class="octicon octicon-repo"></span>
+        <span class="repositories">Repositories</span>
+      </span>
+
+      <span class="b3">
+        <span class="octicon octicon-rss"></span>
+        <span class="public">Public Activity</span>
+        <a href="https://github.com/account">
+          <button class="edit_profile">
+            <span class="octicon octicon-pencil"></span>
+            Edit Profile
+          </button>
+        </span>
+      </a>
+    </div>
+    <!-- end of top half -->
+
+    <!-- bottom half of repos search section -->
+    <div class="bottom_half">
+      <input class="bottom_search" type="text" value="Find a repository...">
+      <button class="search1">Search</button>
+      <span class="things">
+        <a href="https://github.com/repositories/all">
+          <span class="all">All</span>
+        </a>
+        <a href="https://github.com/repositories/public">
+          <span class="items">Public</span>
+        </a>
+        <a href="https://github.com/repositories/private">
+          <span class="items">Private</span>
+        </a>
+        <a href="https://github.com/repositories/sources">
+          <span class="items">Sources</span>
+        </a>
+        <a href="https://github.com/repositories/forks">
+          <span class="items">Forks</span>
+        </a>
+        <a href="https://github.com/repositories/mirrors">
+          <span class="items">Mirrors</span>
+        </a>
+
+        <a href="https://github.com/repositories/new">
+          <button class="search2"><span class="octicon octicon-repo"></span>
+            New</button>
+          </span>
+        </a>
+      </div>
+
+      <section class="bars2"></section>
+
+      <script type="text/template" id="header">
+        <img class="little_me" src= "<%= avatar_url %>" />
+        <span class="username"><%= login %></span>
+      </script>
+
+      <script type="text/template" id="side_box">
+        <img class="me" src= "<%= avatar_url %>" />
+
+        <div class="names">
+          <h1 class="name"><%= name %></h1>
+          <h2 class="login"> <%= login %> </h2>
+        </div>
+
+        <div class="mail"><span class="octicon octicon-mail"></span><%= email %></a></div>
+        <div class="joined"><span class="octicon octicon-clock"></span>Joined on September 22. 2014</div>
+        <ul class="zero">
+          <li class="list"><%= followers %></li>
+          <li class="list2"><%= following %></li>
+        </ul>
+      </script>
+
+      <script type="text/template" id="org_img">
+        <img class="org" src= "<%= avatar_url %>" width=42px;/>
+      </script>
+
+      <script type="text/template" id="repo">
+        <div class="bars">
+
+          <a href='https://github.com/wendynichols/<%=name%>' >
+            <div class="projectName"><%= name %></div>
+          </a>
+          <div class="update"><%= $.format.prettyDate(updated_at) %></div>
+
+          <span class="right"><%= language%>
+            <span class="octicon octicon-star">
+              <%=stargazers_count%>
+              <span class="octicon octicon-git-branch">
+                <%= forks%>
+              </span>
+          </div>
+      </script>
+
+    <script type="text/template" id="star">
+      <span class="star_count"> <%=stargazers_count%> </span>
+    </script>
+
+    <div class='footer'>
+      <div class="foot">
+        <span class="bottom_left">
+          <span>C 2014 GitHub, Inc.</span>
+          <span>Terms</span>
+          <span>Privacy</span>
+          <span>Secutity</span>
+          <span>Contact</span>
+        </span>
+
+        <span class="bottom_right">
+          <span>Status</span>
+          <span>API</span>
+          <span>Training</span>
+          <span>Shop</span>
+          <span>Blog</span>
+          <span>About</span>
+        </span>
+        <span class="foot_icon">
+          <span class="mega-octicon octicon-mark-github"></span>
+        </span>
+      </div>
+    </div>
+
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/token.js"></script>
+        <script src="scripts/main.js"></script>
+</body>
+</html>
