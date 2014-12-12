@@ -35,7 +35,7 @@ var rendered3 = _.template(template3);
 $.getJSON(org).done( function(i){
   i.forEach(function(x){
     $('.org').append(rendered3(x));
-  })
+  });
 });
 
 var template4= $('#repo').html();
@@ -45,5 +45,5 @@ $.getJSON(repo).done( function(i){
   i.updated_at = moment(i.updated_at).fromNow();
   i.forEach(function(x){
     $('.bars2').append(rendered4(x));
-  })
+  });
 });
