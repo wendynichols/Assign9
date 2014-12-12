@@ -4,7 +4,7 @@ var org = 'https://api.github.com/users/wendynichols/orgs';
 var starred = 'https://api.github.com/users/wendynichols/starred';
 
 
-var template= $('#top_box').html();
+var template= $('#header').html();
 var rendered = _.template(template);
 $.getJSON(users).done( function(i){
   $('.head_right').prepend(rendered(i));

@@ -34,7 +34,6 @@
         <a class ="links" href="https://github.com/explore">Explore</a>
         <a class ="links" href ="https://gist.github.com">Gist</a>
         <a class ="links" href ="https://blog.github.com">Blog</a>
-        <a class ="links" href ="https://explore.github.com">Explore</a>
         <a class ="links" href ="https://help.github.com">Help</a>
       </div>
 
@@ -145,7 +144,7 @@
 
       <section class="bars2"></section>
 
-      <script type="text/template" id="top_box">
+      <script type="text/template" id="header">
         <img class="little_me" src= "<%= avatar_url %>" />
         <span class="username"><%= login %></span>
       </script>
@@ -158,15 +157,10 @@
           <h2 class="login"> <%= login %> </h2>
         </div>
 
-        <div class="location"><span class="octicon octicon-location"></span><%= location %></div>
-
         <div class="mail"><span class="octicon octicon-mail"></span><%= email %></a></div>
-
         <div class="joined"><span class="octicon octicon-clock"></span>Joined on September 22. 2014</div>
-
         <ul class="zero">
           <li class="list"><%= followers %></li>
-
           <li class="list2"><%= following %></li>
         </ul>
       </script>
@@ -175,14 +169,13 @@
         <img class="org" src= "<%= avatar_url %>" width=42px;/>
       </script>
 
-
       <script type="text/template" id="repo">
         <div class="bars">
 
           <a href='https://github.com/wendynichols/<%=name%>' >
             <div class="projectName"><%= name %></div>
           </a>
-          <div class="update"><%=updated_at%></div>
+          <div class="update"><%= $.format.prettyDate(updated_at) %></div>
 
           <span class="right"><%= language%>
             <span class="octicon octicon-star">
@@ -232,7 +225,8 @@
 
         <script src="scripts/token.js"></script>
         <!-- build:js scripts/main.js -->
-          <script src="scripts/main.js"></script>
+        <script src="scripts/jQuery_date_format.js"></script>
+        <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>
